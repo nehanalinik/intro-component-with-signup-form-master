@@ -73,4 +73,4 @@ Eagerly waiting to learn more JS and do fun stuff with JS and CSS.
 ## Author
 
 - Frontend Mentor - [@nehanalinik](https://www.frontendmentor.io/profile/nehanalinik)
-- Twitter - [@KennedyNalini](https://twitter.com/KennedyNalini
+- Twitter - [@KennedyNalini](https://twitter.com/KennedyNalini)
