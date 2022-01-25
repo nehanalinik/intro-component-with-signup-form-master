@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+
+  /* ### Accent */
+  --blue: hsl(248, 32%, 49%);
+
+  /* ### Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+html {
+  font-size: 16px;
+}
+button,
+a,
+input {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(./images/bg-intro-desktop.png);
+  background-color: var(--red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.main__contianer {
+  width: 400px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+.content {
+  text-align: center;
+  margin-top: 2rem;
+}
+.content .title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.content .description {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  width: 90%;
+}
+.form__elements {
+  display: grid;
+  place-content: center;
+  row-gap: 0.85rem;
+  width: 430px;
+  max-width: 430px;
+}
+.top__btn {
+  background-color: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.top__btn span {
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+
+.form {
+  padding: 1.3rem 1.5rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form__inputs {
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.form__inputs label {
+  visibility: hidden;
+}
+
+.form__inputs input {
+  border: 1px solid var(--grayish-blue);
+  border-radius: 0.3rem;
+  display: block;
+  width: 100%;
+  padding: 0.85em 1rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000;
+}
+.form__inputs:nth-child(3).error input {
+  color: var(--red);
+}
+.form__inputs.error input {
+  border-color: var(--red);
+}
+.form__inputs.success input {
+  border-color: var(--dark-blue);
+}
+.form__inputs input:focus {
+  outline: none;
+  border: 1px solid var(--dark-blue);
+}
+.form__inputs ::placeholder {
+  color: #757575;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.form__inputs i {
+  visibility: hidden;
+  position: absolute;
+  top: 2.05rem;
+  right: 0.85rem;
+}
+.form__inputs.error i {
+  visibility: visible;
+}
+.form__inputs small {
+  visibility: hidden;
+  font-style: italic;
+  color: var(--red);
+  font-size: 0.75rem;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+}
+.form__inputs.error small {
+  visibility: visible;
+}
+
+.cta {
+  margin-top: 1rem;
+  border: none;
+  background-color: var(--green);
+  color: #fff;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.cta:hover {
+  box-shadow: 0 2px 5.5px rgba(0, 0, 0, 0.4);
+}
+
+.bottom__text {
+  margin: 1rem 0;
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+.bottom__text strong {
+  color: var(--red);
+  cursor: pointer;
+}
+footer {
+  margin: 2rem 0 1rem;
+}
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*! ========BREAKING POINTS========= */
+
+@media screen and (max-width: 280px) {
+  body {
+    background: url(./images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-color: var(--red);
+  }
+  .content {
+    width: 200px;
+    max-width: 200px;
+  }
+  .form__elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    max-width: 200px;
+  }
+  .form__inputs small {
+    font-size: 0.55rem;
+    font-weight: 600;
+  }
+  .cta {
+    font-size: 0.56rem;
+  }
+  .bottom__text {
+    font-size: 0.5rem;
+  }
+  .attribution {
+    font-size: 0.55rem;
+  }
+}
+@media screen and (max-width: 375px) and (min-width: 280px) {
+  body {
+    background: url(./images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-color: var(--red);
+  }
+  .content {
+    width: 260px;
+    max-width: 260px;
+  }
+  .form__elements {
+    width: 270px;
+    max-width: 270px;
+  }
+  .form__inputs small {
+    font-size: 0.65rem;
+  }
+  .cta {
+    font-size: 0.75rem;
+  }
+  .attribution {
+    font-size: 0.68rem;
+  }
+}
+@media screen and (max-width: 475px) and (min-width: 375px) {
+  .content {
+    text-align: center;
+    width: 340px;
+    max-width: 340px;
+  }
+  .form__elements {
+    width: 280px;
+    max-width: 330px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 475px) {
+  .content {
+    text-align: center;
+    width: 380px;
+    max-width: 380px;
+  }
+  .form__elements {
+    width: 340px;
+    max-width: 340px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  .main__contianer {
+    width: 750px;
+    max-width: 750px;
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .content {
+    text-align: start;
+    width: 360px;
+    max-width: 360px;
+  }
+
+  .form__elements {
+    width: 300px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+
+  .main__contianer {
+    width: 1200px;
+    max-width: 1200px;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 0 2rem;
+  }
+  .content {
+    text-align: start;
+    width: 450px;
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .main__contianer {
+    width: 1200px;
+    max-width: 1200px;
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+  .content {
+    text-align: start;
+    width: 450px;
+    max-width: 450px;
+  }
+}
