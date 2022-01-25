@@ -31,8 +31,8 @@ Users should be able to:
 ![desktop view](./images/desktop__view.png)
 ![input active](./images/input__active.png)
 ![error](./images/error__view.png)
-![email error]('./images/email__error.png')
-![mobile view]('./images/mobile__view.png')
+![email error](./images/email__error.png)
+![mobile view](./images/mobile__view.png)
 
 ### Links
 
